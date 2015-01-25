@@ -5,8 +5,9 @@ ruby '2.1.3'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
-# Heroku and serving assets
+# Heroku
 gem 'rails_12factor'
+gem 'puma'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
