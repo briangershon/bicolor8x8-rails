@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 ruby '2.1.3'
 
+# Bootstrap
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+
+# Sqlite for development
+gem 'sqlite3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -43,4 +50,3 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
 end
-
