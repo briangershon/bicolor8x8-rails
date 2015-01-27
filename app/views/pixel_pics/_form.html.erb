@@ -1,7 +1,7 @@
 <%= form_for(@pixel_pic) do |f| %>
   <% if @pixel_pic.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pixel_pic.errors.count, "error") %> prohibited this pixel_pic from being saved:</h2>
+    <div id="error_explanation" class="alert bg-danger">
+      <h2><%= pluralize(@pixel_pic.errors.count, "error") %> prohibited this picture from being saved:</h2>
 
       <ul>
       <% @pixel_pic.errors.full_messages.each do |message| %>
@@ -11,15 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :image_characters %><br>
-    <%= f.text_field :image_characters %>
+    <%= f.text_field :image_characters, :class => 'form-control' %>
+    <p class="help-block">This field should contain 64 characters representing 8 rows of 8 columns. 'o' for empty, 'r' for red, 'g' for green, 'y' for yellow.</p>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-primary' %>
   </div>
 <% end %>

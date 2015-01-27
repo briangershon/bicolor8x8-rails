@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="alert bg-info"><%= notice %></p>
 
 <h1>Listing Pixel Pics</h1>
 
@@ -15,10 +15,10 @@
     <% @pixel_pics.each do |pixel_pic| %>
       <tr>
         <td><%= pixel_pic.name %></td>
-        <td><%= pixel_pic.image_characters %></td>
-        <td><%= link_to 'Show', pixel_pic %></td>
-        <td><%= link_to 'Edit', edit_pixel_pic_path(pixel_pic) %></td>
-        <td><%= link_to 'Destroy', pixel_pic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><code><%= pixel_pic.image_characters %></code></td>
+        <td><%= link_to 'Show', pixel_pic, {:class => 'btn btn-default btn-sm'} %></td>
+        <td><%= link_to 'Edit', edit_pixel_pic_path(pixel_pic), {:class => 'btn btn-default btn-sm'} %></td>
+        <td><%= link_to 'Destroy', pixel_pic, {method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default btn-sm'} %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Pixel pic', new_pixel_pic_path %>
+<%= link_to 'New Pixel pic', new_pixel_pic_path, {:class => 'btn btn-primary'} %>

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="alert bg-info"><%= notice %></p>
 
 <p>
   <strong>Name:</strong>
@@ -10,5 +10,5 @@
   <%= @pixel_pic.image_characters %>
 </p>
 
-<%= link_to 'Edit', edit_pixel_pic_path(@pixel_pic) %> |
-<%= link_to 'Back', pixel_pics_path %>
+<%= link_to 'Edit', edit_pixel_pic_path(@pixel_pic), {:class => 'btn btn-primary btn-sm'} %> |
+<%= link_to 'Back', pixel_pics_path, {:class => 'btn btn-default btn-sm'} %>
