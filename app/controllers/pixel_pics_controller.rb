@@ -64,7 +64,7 @@ class PixelPicsController < ApplicationController
   def latest
     @pixel_pic = PixelPic.order(:created_at).last
     respond_to do |format|
-      format.html { render plain: @pixel_pic.image_characters }
+      format.html { render text: @pixel_pic.image_characters }
       format.json { render json: @pixel_pic }
     end
   end
