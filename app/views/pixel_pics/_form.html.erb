@@ -14,10 +14,11 @@
   <div class="form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name, :class => 'form-control' %>
+    <p class="help-block">This field should contain lower case letters and numbers only.</p>
   </div>
   <div class="form-group">
     <%= f.label :image_characters %><br>
-    <%= f.text_field :image_characters, :class => 'form-control' %>
+    <%= f.text_field :image_characters, :class => 'form-control', :maxlength => "64" %>
     <p class="help-block">This field should contain 64 characters representing 8 rows of 8 columns. 'o' for empty, 'r' for red, 'g' for green, 'y' for yellow.</p>
   </div>
   <div class="actions">
