@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :pixel_pics do
     get 'latest', on: :collection
+    get 'random', on: :collection
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

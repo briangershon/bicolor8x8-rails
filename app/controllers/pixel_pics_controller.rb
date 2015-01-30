@@ -69,6 +69,14 @@ class PixelPicsController < ApplicationController
     end
   end
 
+  def random
+    @pixel_pic = PixelPic.order("RANDOM()").first
+    respond_to do |format|
+      format.html { render plain: @pixel_pic.image_characters }
+      format.json { render json: @pixel_pic }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pixel_pic
