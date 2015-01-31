@@ -20,8 +20,9 @@ For example, this shows a smiley face in green:
 
 There are also two routes that are called by the Arduino project:
 
-    `/pixel_pic/latest` for displaying the emoticon last created.
-    `/pixel_pic/random` for displaying a random emoticon each time.
+* `/pixel_pics/latest` for displaying the emoticon last created.
+
+* `/pixel_pics/random` for displaying a random emoticon each time.
 
 See <https://github.com/briangershon/bicolor8x8-wifi> for the Arduino project
 that consumes this service.
